@@ -1,0 +1,13 @@
+<section class="registration">
+  <div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      <input [(ngModel)]="form.username" class="input" type = "text" placeholder="введите логин" formControlName="user">
+      <br>
+      <br>
+      <input [(ngModel)]="form.password" class="input" type = "password" placeholder="введите пароль" formControlName="password">
+
+      <button class="btn" [disabled]="loginForm.invalid">Войти</button>
+    </form>
+  </div>
+</section>
+

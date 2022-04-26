@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>{{algDescription.hotelName}}</h1>
+    <h2>{{algDescription.hotelClass}}</h2>
+    <div class="image">
+      <img src="{{algDescription.imageUrl}}" alt="иконка алгоритма"/>
+    </div>
+    <p>
+      {{algDescription.description}}
+    </p>
+  <button (click)="likeButtonClick()" class="likeButton">rate up</button>
+  <div>{{numberOfLikes}}</div>
+  <button (click)="dislikeButtonClick()" class="dislikeButton">rate down</button>
+
+</div>

@@ -1,0 +1,97 @@
+<body>
+<section class="banner">
+  <div class="wrapper onThumb">
+    <h1 class="title">{{algType?.sectionName}}</h1> <!-- Заменить на переменную -->
+    <p>{{algType?.sectionDescription}}</p> <!-- Заменить на переменную -->
+  </div>
+</section>
+<section class="catalog">
+  <div class="wrapper">
+    <div class="grid">
+      <div class="grid-item grid-item-title">
+        <h2 class="title-h2">Отели</h2>
+      </div>
+      <div class="grid-item grid-item-img">
+      </div>
+      <div class="grid-item grid-item-catalog">
+        <div class="bg-white">
+          <div class="thumb">
+            <img src="{{algType.firstHotel[2]}}" alt="Icon"> <!-- Заменить на переменную -->
+          </div>
+          <p class="grid-title">{{algType.firstHotel[0]}}</p> <!-- Заменить на переменную -->
+          <p class="grid-price">{{algType.firstHotel[1]}} </p> <!-- Заменить на переменную -->
+          <!--<a class="grid-btn" href="#">Посетить сайт</a>-->
+          <p><button [disabled]="firstDislikeClicked" (click)="firstDislikeButtonClick()">💔</button>
+          {{numOfLikesFirst}}
+          <button [disabled]="firstLikeClicked" (click)="firstLikeButtonClick()">💜</button></p>
+        </div>
+      </div>
+      <div class="grid-item grid-item-catalog">
+        <div class="bg-white">
+          <div class="thumb">
+            <img src="{{algType.secondHotel[2]}}" alt="Icon">
+          </div>
+          <p class="grid-title">{{algType.secondHotel[0]}}</p> <!-- Заменить на переменную -->
+          <p class="grid-price">{{algType.secondHotel[1]}} </p> <!-- Заменить на переменную -->
+          <!--<a class="grid-btn" href="#">Посетить сайт</a>-->
+          <p><button [disabled]="secondDislikeClicked" (click)="secondDislikeButtonClick()">💔</button>
+            {{numOfLikesSecond}}
+            <button [disabled]="secondLikeClicked" (click)="secondLikeButtonClick()">💜</button></p>
+        </div>
+      </div>
+      <div class="grid-item grid-item-catalog">
+        <div class="bg-white">
+          <div class="thumb">
+            <img src="{{algType.thirdHotel[2]}}" alt="Icon">
+          </div>
+          <p class="grid-title">{{algType.thirdHotel[0]}}</p> <!-- Заменить на переменную -->
+          <p class="grid-price">{{algType.thirdHotel[1]}} </p> <!-- Заменить на переменную -->
+          <!--<a class="grid-btn" href="#">Посетить сайт</a>-->
+          <p><button [disabled]="thirdDislikeClicked" (click)="thirdDislikeButtonClick()">💔</button>
+            {{numOfLikesThird}}
+            <button [disabled]="thirdLikeClicked" (click)="thirdLikeButtonClick()">💜</button></p>
+        </div>
+      </div>
+      <div class="grid-item grid-item-catalog">
+        <div class="bg-white">
+          <div class="thumb">
+            <img src="{{algType.fourthHotel[2]}}" alt="Icon">
+          </div>
+          <p class="grid-title">{{algType.fourthHotel[0]}}</p> <!-- Заменить на переменную -->
+          <p class="grid-price">{{algType.fourthHotel[1]}}</p>  <!-- Заменить на переменную -->
+          <!--<a class="grid-btn" href="#">Посетить сайт</a>-->
+          <p><button [disabled]="fourthDislikeClicked" (click)="fourthDislikeButtonClick()">💔</button>
+            {{numOfLikesFourth}}
+            <button [disabled]="fourthLikeClicked" (click)="fourthLikeButtonClick()">💜</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="bg-white">
+    <div class="wrapper">
+      <div class="footer-top">
+        <div class="footer-top-item">
+          <ul class="social">
+            <li class="social-item"><a class="social-link social-youtube" href="" target="_blank"></a></li>
+            <li class="social-item"><a class="social-link social-vk" href="" target="_blank"></a></li>
+            <li class="social-item"><a class="social-link social-fb" href="" target="_blank"></a></li>
+            <li class="social-item"><a class="social-link social-instagram" href="" target="_blank"></a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <span>easyalgos@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="footer-bottom">
+      <p>Easy algorithms (с) 2019 Все права защищены. Обучающий ресурс.</p>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </div>
+
+</footer>
+</body>

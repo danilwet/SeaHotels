@@ -1,0 +1,56 @@
+  <section class="registration">
+    <div class="container">
+      <form [formGroup]="registerForm" (ngSubmit)="registerUser()" >
+
+        <input [(ngModel)]="form.username" class="input" type = "text" placeholder="введите логин" formControlName="user">
+
+        <span class="err" *ngIf="user && user.invalid && user.touched">The input field is invalid</span>
+
+        <input  [(ngModel)]="form.password" class="input" type = "password" placeholder="введите пароль" formControlName="password">
+        <span class="err" *ngIf="password && password.errors?.minlength && password.touched">Длина пароля должна быть как минимум 6 символов<br></span>
+        <span class="err" *ngIf="password && password.errors?.maxlength && password.touched">Длина пароля должна быть не более 20 символов<br></span>
+        <span class="err" *ngIf="password && password.errors?.passwordShouldContainAtLeastOneNumber && password.touched">Пароль должен содержать хотя бы 1 цифру<br></span>
+        <span class="err" *ngIf="password && password.errors?.lowerCaseError && password.touched">Пароль должен содержать хотя бы 1 символ в нижнем регистре<br></span>
+        <span class="err" *ngIf="password && password.errors?.upperCaseError && password.touched">Пароль должен содержать хотя бы 1 символ в верхнем регистре<br></span>
+        <span class="err" *ngIf="password && password.errors?.specialSymbolError && password.touched">Пароль должен содержать хотя бы 1 спец. символ<br></span>
+        <input class="input" type = "password" placeholder="повторите пароль" formControlName="repeatPassword">
+        <span class="err" *ngIf="repeatPassword && repeatPassword.errors?.MustMatch && repeatPassword.touched">Пароли не совпадают</span>
+
+
+        <input  [(ngModel)]="form.name" class="input" type = "text" placeholder="введите имя" formControlName="userName">
+
+        <span class="err" *ngIf="userName && userName.errors?.minlength && userName.touched">Длина имени должна быть как минимум 2 символа<br></span>
+
+        <span class="err" *ngIf="userName && userName.errors?.pattern && userName.touched">Имя должно содержать только русские буквы<br></span>
+
+        <span class="err" *ngIf="userName && userName.errors?.FirstSymbolShouldBeUppercase && userName.touched">Имя должно начинаться с заглавной буквы<br></span>
+
+
+
+        <input  [(ngModel)]="form.surname" class="input" type = "text" placeholder="введите пароль" formControlName="userSurname">
+
+        <span class="err" *ngIf="userSurname && userSurname.errors?.minlength && userSurname.touched">Длина фамилии должна быть как минимум 2 символа<br></span>
+
+        <span class="err" *ngIf="userSurname && userSurname.errors?.pattern && userSurname.touched">Фамилия должно содержать только русские буквы<br></span>
+
+        <span class="err" *ngIf="userSurname && userSurname.errors?.FirstSymbolShouldBeUppercase && userSurname.touched">Фамилия должно начинаться с заглавной буквы<br></span>
+
+
+
+        <input  [(ngModel)]="form.email" class="input" type = "email" placeholder="введите адрес электроной почты" formControlName="email">
+
+        <span class="err" *ngIf="user && user.invalid && user.touched">The input field is invalid</span>
+
+
+
+        <div class="text-center">
+          <button [disabled]="registerForm.invalid" class="btn">Регистрация</button>
+        </div>
+
+
+      </form>
+    </div>
+  </section>
+
+
+

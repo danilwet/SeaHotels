@@ -1,0 +1,24 @@
+<p>test-comp works!</p>
+<div>
+  <form [formGroup]="loginForm">
+    <input type = "text" placeholder="enter name" formControlName="user">
+    <br>
+    <span *ngIf="user && user.invalid && user.touched">The input field is invalid</span>
+    <span *ngIf="user && user.errors?.minlength && user.touched">Длина имени должна быть как минимум 2 символа</span>
+    <span *ngIf="user && user.errors?.pattern && user.touched">Имя должно содержать только русские буквы</span>
+    <span *ngIf="user && user.errors?.abc && user.touched">Имя должно начинаться с заглавной буквы</span>
+    <br>
+    <input type = "text" placeholder="enter password" formControlName="password">
+    <br>
+    <span *ngIf="password && password.errors?.numberError && password.touched" >Хотя бы 1 число</span>
+    <span *ngIf="password && password.errors?.lowerCaseError && password.touched">Хотя бы 1 символ в нижней раскаладке</span>
+    <span *ngIf="password && password.errors?.upperCaseError && password.touched">Хотя бы 1 символ в верхней раскаладке</span>
+    <span *ngIf="password && password.errors?.specialSymbolError && password.touched">Хотя бы 1 спец. символ</span>
+    <br>
+    <input type = "text" placeholder="repeat password" formControlName="repeatPassword">
+    <br>
+    <span *ngIf="repeatPassword && repeatPassword.errors?.MustMatch">Пароли не совпадают</span>
+    <br>
+    <button >Login</button>
+  </form>
+</div>

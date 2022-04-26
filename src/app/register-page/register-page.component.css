@@ -1,0 +1,39 @@
+.registration{
+  position: fixed;
+  width: 40%;
+  padding: 30px;
+  background: rgba(229, 227, 134, 0.71);
+  border: 1px solid rgb(211 211 211);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+}
+
+.input{
+  width: 100%;
+  padding: 10px;
+  padding-right: 1px;
+  border: 1px solid rgb(211 211 211);
+}
+
+.input:focus{
+  outline: none;
+}
+
+.btn{
+  padding: 8px 20px;
+  background: rgb(110, 192, 97);
+  border-radius: 2px;
+  margin-top: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.4s ease;
+}
+
+.btn:hover{
+  background: rgb(0, 253, 147);
+}
+
+.err{
+  color: rgb(158, 18, 18);
+}
